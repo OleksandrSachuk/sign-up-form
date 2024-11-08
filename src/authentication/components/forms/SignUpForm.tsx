@@ -3,6 +3,38 @@ import React, {ChangeEvent, FC, useCallback, useState} from "react";
 import {Box, Typography} from "@mui/material";
 import {Password} from "../common/Password";
 
+/**
+ * `SignUpForm` Component
+ *
+ * The `SignUpForm` component renders a sign-up form with fields for entering a username and password.
+ * It uses Material-UI components for styling and includes custom child components (`SignUp` and `Password`).
+ * The form is fully controlled, meaning it manages the state of input values internally.
+ *
+ * ### Features
+ * - Controlled inputs for `username` and `password`
+ * - State management using React's `useState` hook
+ * - Efficient input handling using `useCallback`
+ * - Simple form layout using Material-UI's `Box` component
+ *
+ * ### Props
+ * The `SignUpForm` component does not accept any props directly.
+ *
+ * ### State
+ * - `formValues`: An object with the following properties:
+ *   - `username` (string): The current value of the username input.
+ *   - `password` (string): The current value of the password input.
+ *
+ * ### Methods
+ * - `onChange`: Handles changes to the input fields and updates the state.
+ * - `handleSubmit`: Handles the form submission logic (to be implemented).
+ *
+ * ### Dependencies
+ * - `SignUp` component: Renders the username input field.
+ * - `Password` component: Renders the password input field.
+ * - `Box`, `Typography` from MUI: Used for layout and styling.
+ *
+ */
+
 interface FormValues {
     username: string;
     password: string;
